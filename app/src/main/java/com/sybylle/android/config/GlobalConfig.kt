@@ -1,6 +1,6 @@
 package com.sybylle.android.config
 
-import com.posthog.android.BuildConfig
+import com.sybylle.azalea.BuildConfig
 
 object GlobalConfig {
 
