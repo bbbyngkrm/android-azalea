@@ -5,13 +5,9 @@ coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-koinBom = "4.0.3"
+koinBom = "4.1.0"
 kotlinxSerializationJson = "1.9.0"
-ktorClientAndroidVersion = "3.1.3"
-ktorClientCoreVersion = "3.1.3"
-ktorClientContentNegotiationJvm = "3.1.3"
-ktorClientLogging = "3.1.3"
-ktorSerializationKotlinxJson = "3.1.3"
+ktor = "3.1.3"
 lifecycleRuntimeKtx = "2.9.1"
 activityCompose = "1.10.1"
 composeBom = "2025.06.01"
@@ -37,11 +33,11 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
-ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorSerializationKotlinxJson" }
-ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientLogging" }
-ktor-client-content-negotiation-jvm = { module = "io.ktor:ktor-client-content-negotiation-jvm", version.ref = "ktorClientContentNegotiationJvm" }
-ktor-ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClientCoreVersion" }
-ktor-ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroidVersion" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-content-negotiation-jvm = { module = "io.ktor:ktor-client-content-negotiation-jvm", version.ref = "ktor" }
+ktor-ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
 posthog-android = { module = "com.posthog:posthog-android", version.ref = "posthogAndroidVersion" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
