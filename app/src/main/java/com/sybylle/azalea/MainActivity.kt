@@ -11,15 +11,26 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.sybylle.android.config.remote.RemoteConfig
+import androidx.lifecycle.lifecycleScope
+import com.sybylle.azalea.network.MangaDexApi
 import com.sybylle.azalea.ui.theme.AzaleaTheme
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.koin.android.ext.android.inject
+import timber.log.Timber
 
 class MainActivity : ComponentActivity() {
+
+    private val mangaDexApi: MangaDexApi by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (RemoteConfig.getFeatureFlag("your-experiment-feature-flag") == "test") {
-
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val manga = mangaDexApi.getManga()
+            }
         }
 
         enableEdgeToEdge()
