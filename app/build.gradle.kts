@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 android {
@@ -51,9 +52,10 @@ android {
 
 dependencies {
 
-    implementation("com.posthog:posthog-android:3.19.1")
-
     implementation(libs.androidx.core.ktx)
+    implementation(project.dependencies.platform(libs.insert.koin.bom))
+    implementation(libs.insert.koin.koin.android)
+    implementation(libs.insert.koin.koin.core)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
@@ -61,6 +63,15 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.ktor.client.logging)
+    implementation(libs.ktor.client.content.negotiation.jvm)
+    implementation(libs.ktor.ktor.client.core)
+    implementation(libs.ktor.ktor.client.android)
+    implementation(libs.posthog.android)
+    implementation(libs.timber)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
